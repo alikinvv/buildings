@@ -101,6 +101,11 @@ input {
 		color: #fff;
 	}
 
+	&-green {
+		background: $green;
+		color: #fff;
+	}
+
 	&-orange {
 		background: linear-gradient(336.06deg, #FF3D00 26.08%, #FFD600 125.77%);
 		color: #fff;
@@ -178,6 +183,33 @@ input {
 		align-items: flex-start;
 		justify-content: space-between;
 
+		&.sidebar {
+			background: transparent;
+			border-radius: 0;
+			color: #fff;
+			margin-top: 45px;
+			margin-bottom: -14px;
+
+			p {
+				color: #fff;
+			}
+
+			li {
+				color: #fff;
+			}
+
+			.sidebar__block {
+				width: 100%;
+				margin: 0;
+			}
+
+			.social {
+				svg {
+					margin: 0;
+				}
+			}
+		}
+
 		svg {
 			fill: #fff;
 			font-size: 97px;
@@ -240,6 +272,33 @@ input {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		& > .product__list {
+			margin-left: -2%;
+			margin-right: -2%;
+
+			.product {
+				width: 21%;
+				margin-left: 2%;
+				margin-right: 2%;
+			}
+		}
+
+		&.block {
+			display: block;
+
+			& + .container .product__list {
+				margin-top: 0;
+			}
+
+			.slider {
+				margin-bottom: 40px;
+
+				&__info {
+					width: 45%;
+				}
+			}
+		}
 	}
 
 	.sidebar {
@@ -314,28 +373,28 @@ input {
 		border-radius: 10px;
 		padding: 26px 37px 19px;
     	margin-bottom: 71px;
+	}
 
-		ul {
-			list-style-type: none;
-			padding: 0;
+	ul {
+		list-style-type: none;
+		padding: 0;
 
-			li {
-				font-family: $montserrat;
-				font-size: 19px;
-				line-height: 23px;
-				color: #1c1c1c;
-				margin-bottom: 10px;
+		li {
+			font-family: $montserrat;
+			font-size: 19px;
+			line-height: 23px;
+			color: #1c1c1c;
+			margin-bottom: 10px;
 
-				&:last-child {
-					margin-bottom: 0;
-				}
+			&:last-child {
+				margin-bottom: 0;
+			}
 
-				a {
-					text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+			a {
+				text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
 
-					&:hover {
-						text-decoration: underline;
-					}
+				&:hover {
+					text-decoration: underline;
 				}
 			}
 		}
@@ -536,18 +595,14 @@ input {
 }
 
 .product {
-	width: 31%;
+	width: 30%;
 	border-radius: 10px;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
-	margin-bottom: 4%;
 	transition: $trans;
+	margin: 0 1.6% 4%;
 
 	&:hover {
 		box-shadow: none;
-	}
-
-	&:nth-child(3n+2) {
-		margin: 0 3.5%;
 	}
 
 	&__img {
@@ -564,6 +619,8 @@ input {
 		align-items: flex-start;
 		margin-top: 40px;
 		flex-wrap: wrap;
+		margin-left: -1.6%;
+		margin-right: -1.6%;
 	}
 
 	&__info {
@@ -678,12 +735,8 @@ input {
 			p {
 				font-size: 14px;
 
-				a {
+				span {
 					color: $blue;
-
-					&:hover {
-						text-decoration: underline;
-					}
 				}
 			}
 		}
@@ -715,12 +768,51 @@ input {
 
 .tooltip {
 	position: relative;
+	cursor: pointer;
+
+	&:hover {
+		.tooltip__content {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 
 	&__content {
 		position: absolute;
-		top: 0;
+		top: -10px;
 		left: 50%;
-		transform: translateX(-50%) translateY(100%);
+		transform: translateX(-50%) translateY(-100%);
 		background: #fff;
+		white-space: nowrap;
+		text-align: center;
+		padding: 20px;
+		box-shadow: 2px 2px 10px rgba(5, 11, 34, 0.15);
+		border-radius: 10px;
+		opacity: 0;
+		visibility: hidden;
+		transition: $trans;
+		cursor: default;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%) rotate(45deg);
+			bottom: -5px;
+			width: 10px;
+			height: 10px;
+			background: #fff;
+		}
+
+		span {
+			font-size: 14px;
+			color: #000 !important;
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		.btn {
+			padding: 8px 29px;
+		}
 	}
 }
