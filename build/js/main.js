@@ -29,3 +29,56 @@ var swiper = new Swiper('.slider', {
       prevEl: '.swiper-button-prev',
     }
 });
+
+$('body').on('change', '.create__photo input', (e) => {
+    if ($(e.currentTarget).val().length > 0) {
+        $('.create__photo').addClass('active');
+    } else {
+        $('.create__photo').removeClass('active');
+    }
+});
+
+$('body').on('click', '.create__photo .uploaded a', (e) => {
+    $('.create__photo').removeClass('active');
+    $('.create__photo input').val('');
+});
+
+$('body').on('keyup', '.form-group input', (e) => {
+    if ($(e.currentTarget).parent().find('.count')) {
+        $(e.currentTarget).parent().find('.current').text($(e.currentTarget).val().length);
+
+        if ($(e.currentTarget).val().length > parseInt($(e.currentTarget).parent().find('.full').text())) {
+            $(e.currentTarget).parent().addClass('error');
+        } else {
+            $(e.currentTarget).parent().removeClass('error');
+        }
+    }
+});
+
+$('body').on('blur', '.form-group input', (e) => {
+    if ($(e.currentTarget).parent().find('.count')) {
+        $(e.currentTarget).parent().find('.current').text($(e.currentTarget).val().length);
+
+        if ($(e.currentTarget).val().length > parseInt($(e.currentTarget).parent().find('.full').text())) {
+            $(e.currentTarget).parent().addClass('error');
+        } else {
+            $(e.currentTarget).parent().removeClass('error');
+        }
+    }
+});
+
+function initMap() {
+    if ($('#map').length > 0) {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: {lat: 55.754176, lng: 37.620359}
+        });
+    
+        var image = '/img/point.svg';
+        var beachMarker = new google.maps.Marker({
+            position: {lat: 55.754176, lng: 37.620359},
+            map: map,
+            icon: image
+        });
+    }
+}

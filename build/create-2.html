@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31485994-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-31485994-5');
+    </script>
+</head>
+<body>
+
+<section class="menu dark">
+  <div class="container">
+    <a href="javascript:void(0)" class="active">ТОВАРЫ <span class="menu__count">20</span></a>
+    <a href="javascript:void(0)">ТЕНДЕРЫ</a>
+    <a href="javascript:void(0)">КОНТАКТНАЯ ИНФОРМАЦИЯ</a>
+    <a href="javascript:void(0)">О КОМПАНИИ</a>
+    <a href="javascript:void(0)">ДОСТАВКА И ОПЛАТА</a>
+  </div>
+</section>
+<!-- START CONTENT  -->
+
+<section class="company create full" style="background-image: url('img/create.jpg')">
+    <div class="container">
+        <div class="company__row">
+            <div class="company__left">
+                <form action="" class="create__photo">
+                    <input type="file">
+                    <div class="label">
+                        <p>ЛОГО</p>
+                        <span>компании</span>
+                        <span>200х200</span>
+                        <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-upload"></use></svg>
+                    </div>
+                    <div class="uploaded"><img src="img/uploaded.svg" alt="">
+                        <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-upload"></use></svg>
+                        <span>200х200</span>
+                        <a href="javascript:void(0)">Удалить</a>
+                    </div>
+                </form>
+                <div class="company__info">
+                    <p class="company__name">Название <br> компании</p>
+                    <p class="company__desc">Слоган компании <br> Длинный слоган компании</p>
+                </div>
+            </div>
+            <div class="company__contacts">
+                <a href="tel:88312094914"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-phone"></use></svg> 8 (831) 209-49-14</a>
+                <a href="tel:88312094920">8 (831) 209-49-20</a>
+            </div>
+        </div>
+        <div class="company__row create__controls">
+            <a href="javascript:void(0)" class="btn"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-edit"></use></svg> Редактировать мой магазин</a>
+            <form action="" class="create__background">
+                <input type="file">
+                <div class="label">
+                    <div class="btn btn-border-red"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-upload"></use></svg> Загрузить фон шапки, размер не менее 1920x450px</div>
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="btn btn-white"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-monitor"></use></svg> Предпросмотр магазина</a>
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar__main">
+                <p class="sidebar__title small">Создание магазина:</p>
+                <ul class="sidebar__navigation">
+                    <li><a class="done" href="javascript:void(0)"><span>Шаг 1.</span> Выбор шаблона</a></li>
+                    <li>
+                        <a class="active" href="javascript:void(0)"><span>Шаг 2.</span> Настройка <br> информации о компании</a>
+
+                        <ul>
+                            <li><a class="done" href="javascript:void(0)"><span>Шаг 2.1.</span> Категория магазина, <br> регион и контакты</a></li>
+                            <li><a class="done" href="javascript:void(0)"><span>Шаг 2.2.</span> Информация <br> о компании</a></li>
+                            <li><a class="active" href="javascript:void(0)"><span>Шаг 2.3.</span> Социальные сети <br> выбор домена и доп. настройки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)"><span>Шаг 3.</span> Выбор товаров <br> для отображения в магазине</a></li>
+                    <li><a href="javascript:void(0)"><span>Шаг 4.</span> Настройка <br> уникальных предложений</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__body">
+            <div class="step">
+                <div class="step__header">
+                    <h3 class="step__name">Шаг 2.2. Информация о компании</h3>
+                    <a href="javascript:void(0)"><span>Следующий шаг</span><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-arrow-right"></use></svg></a>
+                </div>
+                <form action="" class="step__body block">
+                    <p class="step__title">Общая информация и описание компании</p>
+                    
+                    <div class="form-group">
+                        <span>Введите название компании<span>*</span></span>
+                        <input type="text">
+                        <div class="count">
+                            <span class="current">0</span>/<span class="full">5</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>Слоган<span>*</span></span>
+                        <input type="text">
+                        <div class="count">
+                            <span class="current">0</span>/<span class="full">52</span>
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <span>Режим работы<span>*</span></span>
+                        <input type="text" value="123456789">
+                        <div class="count">
+                            <span class="current">9</span>/<span class="full">8</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>Описание организации<span>*</span><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-question"></use></svg></span>
+                        <input type="text">
+                        <div class="count">
+                            <span class="current">0</span>/<span class="full">2000</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>Вставьте ссылку на ваш промо ролик<svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-question"></use></svg></span>
+                        <div class="flex">
+                            <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-play"></use></svg>
+                            <input type="text">
+                        </div>
+                        <div class="count">
+                            <span class="current">0</span>/<span class="full">2000</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>Условия доставки</span>
+                        <input type="text">
+                        <div class="count">
+                            <span class="current">0</span>/<span class="full">2000</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>Условия оплаты</span>
+                        <input type="text">
+                        <div class="count">
+                            <span class="current">0</span>/<span class="full">2000</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="step__controls">
+                    <div class="step__error">Заполнены не все обязательные поля*</div>
+                    <a href="javascript:void(0)"><span>Следующий шаг</span><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-arrow-right"></use></svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer create">
+    <div class="container">
+        <div class="footer__col">
+            <div class="footer__company">
+                <img src="img/logo-company.png" alt="">
+                <div>
+                    <span class="footer__name">Название компании</span>
+                    <span>Слоган компании</span>
+                </div>
+            </div>
+            <nav>
+                <a href="javascript:void(0)">Товары</a>
+                <a href="javascript:void(0)">Тендеры</a>
+                <a href="javascript:void(0)">Контактная информация</a>
+                <a href="javascript:void(0)">О компании</a>
+                <a href="javascript:void(0)">Доставка и оплата</a>
+            </nav>
+        </div>
+
+        <div class="footer__col sidebar">
+            <div class="footer__title">E-mail:</div>
+            <a href="mailto:info@stroim_dom.ru">info@stroim_dom.ru</a>
+
+            <div class="sidebar__block">
+                <p class="footer__title">Мы в соц. сетях:</p>
+                <ul class="social">
+                    <li><a class="vk" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-vk"></use></svg></a></li>
+                    <li><a class="inst" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-inst"></use></svg></a></li>
+                    <li><a class="youtube" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-youtube"></use></svg></a></li>
+                    <li><a class="facebook" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+                    <li><a class="twitter" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__col">
+           <p>Магазин работает на платформе Sbagry</p>
+           <img src="img/sbagry.svg" alt="">
+           <ul>
+               <li><a href="javascript:void(0)">Перейти на доску объявлений</a></li>
+               <li><a href="javascript:void(0)">Пользовательское соглагшение</a></li>
+               <li><a href="javascript:void(0)">Политика конфиденциальности</a></li>
+           </ul>
+           <p>© Sbagry 2019</p>
+        </div>
+    </div>
+</footer>
+
+<!-- END CONTENT  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

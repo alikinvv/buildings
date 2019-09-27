@@ -1,0 +1,206 @@
+//= template/header.html
+<!-- START CONTENT  -->
+
+<section class="company create" style="background-image: url('img/create.jpg')">
+    <div class="container">
+        <div class="company__row">
+            <div class="company__left">
+                <form action="" class="create__photo">
+                    <input type="file">
+                    <div class="label">
+                        <p>ЛОГО</p>
+                        <span>компании</span>
+                        <span>200х200</span>
+                        <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-upload"></use></svg>
+                    </div>
+                    <div class="uploaded"><img src="img/uploaded.svg" alt="">
+                        <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-upload"></use></svg>
+                        <span>200х200</span>
+                        <a href="javascript:void(0)">Удалить</a>
+                    </div>
+                </form>
+                <div class="company__info">
+                    <p class="company__name">Название <br> компании</p>
+                    <p class="company__desc">Слоган компании <br> Длинный слоган компании</p>
+                </div>
+            </div>
+            <div class="company__contacts">
+                <a href="tel:88312094914"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-phone"></use></svg> 8 (831) 209-49-14</a>
+                <a href="tel:88312094920">8 (831) 209-49-20</a>
+            </div>
+        </div>
+        <div class="company__row create__controls">
+            <a href="javascript:void(0)" class="btn"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-edit"></use></svg> Редактировать мой магазин</a>
+            <form action="" class="create__background">
+                <input type="file">
+                <div class="label">
+                    <div class="btn btn-border-red"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-upload"></use></svg> Загрузить фон шапки, размер не менее 1920x450px</div>
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="btn btn-white"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-monitor"></use></svg> Предпросмотр магазина</a>
+        </div>
+        <div class="company__row sidebar">
+            <div class="sidebar__block">
+                <p class="sidebar__title">Часы работы:</p>
+                <ul>
+                    <li>Пн-Пт: с 8.00 до 21.00</li>
+                    <li>Сб-Вс: с 9.00 до 19.00</li>
+                </ul>
+            </div>
+            <div class="sidebar__block">
+                <p class="sidebar__title">Адрес:</p>
+                <ul>
+                    <li>347949, Ростовская обл., <br> г. Таганрог, ул. Лесная <br> Биржа 6-К</li>
+                </ul>
+            </div>
+            <div class="sidebar__block">
+                <p class="sidebar__title">E-mail:</p>
+                <ul>
+                    <li><a href="mailto:info@stroim_dom.ru">info@stroim_dom.ru</a></li>
+                </ul>
+            </div>
+            <div class="sidebar__block">
+                <p class="sidebar__title">Мы в соц. сетях:</p>
+                <ul class="social">
+                    <li><a class="vk" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-vk"></use></svg></a></li>
+                    <li><a class="inst" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-inst"></use></svg></a></li>
+                    <li><a class="youtube" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-youtube"></use></svg></a></li>
+                    <li><a class="facebook" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+                    <li><a class="twitter" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar__main">
+                <p class="sidebar__title small">Создание магазина:</p>
+                <ul class="sidebar__navigation">
+                    <li><a class="done" href="javascript:void(0)"><span>Шаг 1.</span> Выбор шаблона</a></li>
+                    <li>
+                        <a class="active" href="javascript:void(0)"><span>Шаг 2.</span> Настройка <br> информации о компании</a>
+
+                        <ul>
+                            <li><a class="active" href="javascript:void(0)"><span>Шаг 2.1.</span> Категория магазина, <br> регион и контакты</a></li>
+                            <li><a href="javascript:void(0)"><span>Шаг 2.2.</span> Информация <br> о компании</a></li>
+                            <li><a href="javascript:void(0)"><span>Шаг 2.3.</span> Социальные сети <br> выбор домена и доп. настройки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)"><span>Шаг 3.</span> Выбор товаров <br> для отображения в магазине</a></li>
+                    <li><a href="javascript:void(0)"><span>Шаг 4.</span> Настройка <br> уникальных предложений</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__body">
+            <div class="step">
+                <div class="step__header">
+                    <h3 class="step__name">Шаг 2.1. Категория магазина, регион и контакты</h3>
+                    <a href="javascript:void(0)"><span>Следующий шаг</span><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-arrow-right"></use></svg></a>
+                </div>
+                <form action="" class="step__body">
+                    <div class="step__col">
+                        <p class="step__title">Основные настройки</p>
+                        <div class="form-group select">
+                            <span>Выберите категорию компании<span>*</span></span>
+                            <select name="" id="">
+                                <option value="">IT, Интернет, телеком</option>
+                                <option value="">IT, Интернет, телеком</option>
+                                <option value="">IT, Интернет, телеком</option>
+                            </select>
+                        </div>
+                        <div class="form-group select">
+                            <span>Ваши регион<span>*</span></span>
+                            <select name="" id="">
+                                <option value="">Россия</option>
+                                <option value="">Россия</option>
+                            </select>
+                        </div>
+                        <p><span>*</span> -  Поля обязательные к заполнению</p>
+                        <p><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-question"></use></svg> -  Поля содержащие пояснение или рекомендации по заполнению.</p>
+                    </div>
+                    <div class="step__col">
+                        <p class="step__title">Контактная информация</p>
+                        <div class="form-group">
+                            <span>Основной адрес<span>*</span></span>
+                            <input type="text" value="пр-кт Калинина, 21Б">
+                        </div>
+                        <div class="form-group">
+                            <span>E-mail<span>*</span></span>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <span>Основной номер телефона<span>*</span></span>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <span>Дополнительный номер телефона <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-question"></use></svg></span>
+                            <input type="text">
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox">
+                            <span>Сделать дополнительный номер видимым</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="step__controls">
+                    <div class="step__error">Заполнены не все обязательные поля*</div>
+                    <a href="javascript:void(0)"><span>Следующий шаг</span><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-arrow-right"></use></svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer create">
+    <div class="container">
+        <div class="footer__col">
+            <div class="footer__company">
+                <img src="img/logo-company.png" alt="">
+                <div>
+                    <span class="footer__name">Название компании</span>
+                    <span>Слоган компании</span>
+                </div>
+            </div>
+            <nav>
+                <a href="javascript:void(0)">Товары</a>
+                <a href="javascript:void(0)">Тендеры</a>
+                <a href="javascript:void(0)">Контактная информация</a>
+                <a href="javascript:void(0)">О компании</a>
+                <a href="javascript:void(0)">Доставка и оплата</a>
+            </nav>
+        </div>
+
+        <div class="footer__col sidebar">
+            <div class="footer__title">E-mail:</div>
+            <a href="mailto:info@stroim_dom.ru">info@stroim_dom.ru</a>
+
+            <div class="sidebar__block">
+                <p class="footer__title">Мы в соц. сетях:</p>
+                <ul class="social">
+                    <li><a class="vk" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-vk"></use></svg></a></li>
+                    <li><a class="inst" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-inst"></use></svg></a></li>
+                    <li><a class="youtube" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-youtube"></use></svg></a></li>
+                    <li><a class="facebook" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+                    <li><a class="twitter" href="javascript:void(0)"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__col">
+           <p>Магазин работает на платформе Sbagry</p>
+           <img src="img/sbagry.svg" alt="">
+           <ul>
+               <li><a href="javascript:void(0)">Перейти на доску объявлений</a></li>
+               <li><a href="javascript:void(0)">Пользовательское соглагшение</a></li>
+               <li><a href="javascript:void(0)">Политика конфиденциальности</a></li>
+           </ul>
+           <p>© Sbagry 2019</p>
+        </div>
+    </div>
+</footer>
+
+<!-- END CONTENT  -->
+//= template/footer.html

@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<section class="menu">
+<section class="menu dark">
   <div class="container">
     <a href="javascript:void(0)" class="active">ТОВАРЫ <span class="menu__count">20</span></a>
     <a href="javascript:void(0)">ТЕНДЕРЫ</a>
@@ -39,10 +39,12 @@
 <section class="company" style="background-image: url('img/main-bg.jpg')">
     <div class="container">
         <div class="company__row">
-            <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-house"></use></svg>
-            <div class="company__info">
-                <p class="company__name">Строим Дом</p>
-                <p class="company__desc">Поможем вам делать ремонт с удовольствием</p>
+            <div class="company__left">
+                <svg class="company__photo icon"><use xlink:href="img/symbol-defs.svg#icon-house"></use></svg>
+                <div class="company__info">
+                    <p class="company__name">Строим Дом</p>
+                    <p class="company__desc">Поможем вам делать ремонт с удовольствием</p>
+                </div>
             </div>
             <div class="company__contacts">
                 <a href="tel:88312094914"><svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-phone"></use></svg> 8 (831) 209-49-14</a>
@@ -435,6 +437,7 @@
 <!-- END CONTENT  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
