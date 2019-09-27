@@ -30,6 +30,29 @@ var swiper = new Swiper('.slider', {
     }
 });
 
+var galleryThumbs = new Swiper('.item__nav', {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: 'vertical',
+    centeredSlides: true,
+        slideToClickedSlide: true
+});
+
+var galleryTop = new Swiper('.item__main', {
+    spaceBetween: 10,
+    slideToClickedSlide: true,
+    navigation: {
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    }
+});
+
+galleryThumbs.params.control = galleryTop;
+galleryTop.params.control = galleryThumbs;
+
 $('body').on('change', '.create__photo input', (e) => {
     if ($(e.currentTarget).val().length > 0) {
         $('.create__photo').addClass('active');
