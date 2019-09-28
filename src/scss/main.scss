@@ -46,11 +46,23 @@ input {
 }
 
 .container {
+	@include r(1279) {
+		padding: 0 20px;
+	}
+
 	max-width: 1110px;
 	margin: 0 auto;
 }
 
 .btn {
+	@include r(1279) {
+		padding: 9px 15px;
+	}
+
+	@include r(767) {
+		font-size: 14px;
+	}
+
 	display: inline-block;
 	cursor: pointer;
 	background: rgba(34, 41, 42, 0.9);
@@ -89,6 +101,10 @@ input {
 	}
 
 	svg {
+		@include r(767) {
+			font-size: 6px;
+		}
+
 		font-size: 8px;
 		margin-right: 17px;
 		fill: #fff;
@@ -179,6 +195,16 @@ input {
 	}
 
 	.container {
+		@include r(1279) {
+			padding: 20px;
+		}
+
+		@include r(767) {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			padding-bottom: 0;
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -187,6 +213,16 @@ input {
 	}
 
 	a {
+		@include r(1023) {
+			font-size: 16px;
+		}
+
+		@include r(767) {
+			font-size: 12px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
+
 		color: #fff;
 		font-weight: bold;
 	}
@@ -196,6 +232,10 @@ input {
 	}
 
 	.bar {
+		@include r(767) {
+			display: none;
+		}
+
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -207,6 +247,10 @@ input {
 }
 
 .company {
+	@include r(767) {
+		padding-top: 40px;
+	}
+
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -229,6 +273,14 @@ input {
 	}
 
 	.btn {
+		@include r(1023) {
+			margin-top: 20px;
+			font-size: 14px;
+			padding: 9px 17px;
+			border-radius: 8px;
+			margin-top: 0;
+		}
+
 		margin-top: 52px;
 	}
 
@@ -237,11 +289,20 @@ input {
 	}
 
 	&__row {
+		@include r(1023) {
+			display: block;
+		}
+
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
 
 		&.sidebar {
+			@include r(1023) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			
 			background: transparent;
 			border-radius: 0;
 			color: #fff;
@@ -249,19 +310,50 @@ input {
 			margin-bottom: -14px;
 
 			p {
+				@include r(767) {
+					font-size: 14px;
+				}
+
 				color: #fff;
 			}
 
 			li {
+				@include r(1279) {
+					font-size: 16px;
+				}
+				
+				@include r(767) {
+					font-size: 14px;
+					line-height: 1.5;
+
+					br {
+						display: none;
+					}
+				}
+
 				color: #fff;
 			}
 
 			.sidebar__block {
+				@include r(1023) {
+					width: 50%;
+				}
+
+				@include r(767) {
+					width: 100%;
+				}
+
 				width: 100%;
 				margin: 0;
 			}
 
 			.social {
+				@include r(1023) {
+					width: 60%;
+				}
+				
+				width: 90%;
+
 				svg {
 					margin: 0;
 					fill: #fff;
@@ -271,6 +363,15 @@ input {
 	}
 
 	&__photo {
+		@include r(1023) {
+			font-size: 65px;
+		}
+
+		@include r(767) {
+			font-size: 30px;
+			margin-right: 20px;
+		}
+
 		fill: #fff;
 		font-size: 97px;
 		margin-right: 45px;
@@ -283,12 +384,34 @@ input {
 	}
 
 	&__name {
+		@include r(1023) {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+
+		@include r(767) {
+			font-size: 20px;
+		}
+
 		font-weight: bold;
 		font-size: 60px;
 		margin-bottom: 43px;
 	}
 
 	&__desc {
+		@include r(1279) {
+			font-size: 35px;
+			line-height: 1.5;
+		}
+
+		@include r(1023) {
+			font-size: 30px;
+		}
+
+		@include r(767) {
+			font-size: 14px;
+		}
+
 		font-size: 45px;
 		font-weight: 300;
 		line-height: 53px;
@@ -296,12 +419,35 @@ input {
 	}
 
 	&__contacts {
+		@include r(1023) {
+			margin-top: 40px;
+			flex-direction: row;
+			padding-left: 60px;
+		}
+
+		@include r(767) {
+			padding-left: 40px;
+			margin-top: 20px;
+		}
+
 		display: flex;
 		flex-direction: column;
 		flex-shrink: 0;
 		padding: 8px 0;
 
 		a {
+			@include r(1023) {
+				margin-right: 30px;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+
+			@include r(767) {
+				font-size: 14px;
+			}
+
 			font-family: $montserrat;
 			font-size: 30px;
 			text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
@@ -313,6 +459,12 @@ input {
 			}
 
 			svg {
+				@include r(767) {
+					font-size: 8px;
+					top: 0;
+					left: -10px;
+				}
+
 				fill: $green;
 				font-size: 12px;
 				position: absolute;
@@ -325,9 +477,17 @@ input {
 }
 
 .main {
+	@include r(767) {
+		padding-top: 20px;
+	}
+
 	padding: 40px 0 86px;
 
 	.container {
+		@include r(1023) {
+			flex-wrap: wrap;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -337,6 +497,14 @@ input {
 			margin-right: -2%;
 
 			.product {
+				@include r(1023) {
+					width: 46%;
+				}
+
+				@include r(767) {
+					width: 100%;
+				}
+
 				width: 21%;
 				margin-left: 2%;
 				margin-right: 2%;
@@ -364,25 +532,60 @@ input {
 		padding: 40px 0 30px;
 		
 		.sidebar {
+			@include r(1023) {
+				width: 100%;
+
+				.social {
+					width: 30%;
+				}
+			}
+
 			width: 23%;
 		}
 	}
 
 	.sidebar {
+		@include r(1023) {
+			width: 100%;
+			order: 2;
+			margin-top: 40px;
+
+			.social {
+				@include r(767) {
+					width: 100%;
+				}
+
+				width: 50%;
+			}
+		}
+
 		width: 29%;
 	}
 
 	&__body {
+		@include r(1023) {
+			width: 100%;
+			order: 1;
+		}
+
 		width: 67.3%;
 	}
 }
 
 .text {
 	&:not(.main__body) iframe {
+		@include r(1279) {
+			height: 54vw;
+		}
+
 		height: 32vw;
 	}
 
 	h3 {
+		@include r(767) {
+			font-size: 20px;
+		}
+
 		font-family: $montserrat;
 		font-weight: bold;
 		font-size: 25px;
@@ -392,6 +595,12 @@ input {
 	}
 
 	p {
+		@include r(767) {
+			font-size: 14px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
 		font-size: 19px;
 		line-height: 30px;
 		color: #000;
@@ -399,6 +608,14 @@ input {
 	}
 
 	iframe {
+		@include r(1279) {
+			height: 36vw;
+		}
+
+		@include r(1023) {
+			height: 52vw;
+		}
+
 		width: 100%;
 		height: 22vw;
 	}
@@ -410,10 +627,24 @@ input {
 
 	&__navigation {
 		li {
+			@include r(767) {
+				margin-bottom: 10px !important;
+			}
+
 			margin-bottom: 22px !important;
 		} 
 
 		a {
+			@include r(1279) {
+				br {
+					display: none;
+				}
+			}
+
+			@include r(767) {
+				font-size: 16px;
+			}
+
 			font-size: 19px;
 			font-weight: normal;
 			line-height: 22px;
@@ -448,8 +679,19 @@ input {
 	}
 
 	.banner {
+		@include r(1023) {
+			width: 48%;
+			margin: 0 auto;
+			background-size: 105%;
+		}
+
+		@include r(767) {
+			width: 100%;
+			height: 240vw;
+		}
+
 		height: 1154px;
-		background-size: cover;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center;
 		border-radius: 10px;
@@ -502,6 +744,10 @@ input {
 	}
 
 	&__main {
+		@include r(767) {
+			padding: 20px;
+		}
+		
 		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
 		border-radius: 10px;
 		padding: 26px 37px 19px;
@@ -578,6 +824,10 @@ input {
 	}
 
 	&__title {
+		@include r(1279) {
+			font-size: 16px;
+		}
+
 		font-family: $montserrat;
 		font-size: 19px;
 		color: #1c1c1c;
@@ -651,16 +901,58 @@ input {
 }
 
 .slider {
-	.swiper {
+	.slick {
 		&-slide {
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 10px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&-next {
+			@include r(767) {
+				right: 0;
+			}
+
+			width: 27px;
+			height: 23px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url('../img/arrow-right.svg');
+			position: absolute;
+			right: -20px;
+			top: -3px;
+			cursor: pointer;
+		}
+
+		&-prev {
+			@include r(767) {
+				left: 0;
+			}
+
+			width: 27px;
+    		height: 23px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url('../img/arrow-left.svg');
+			position: absolute;
+			left: -20px;
+			top: -3px;
+			cursor: pointer;
 		}
 	}
 
 	&__info {
+		@include r(767) {
+			width: 100%;
+		}
+		
 		width: 63%;
 		background: rgba(31, 31, 31, 0.5);
 		position: relative;
@@ -684,6 +976,11 @@ input {
 	}
 
 	&__bottom {
+		@include r(767) {
+			margin-top: 20px;
+			display: block;
+		}
+
 		margin-top: 77px;
 		display: flex;
 		align-items: center;
@@ -691,49 +988,23 @@ input {
 	}
 
 	&__controls {
+		@include r(767) {
+			margin-top: 20px;
+			text-align: center;
+		}
+
 		position: relative;
 		padding: 0 24px;
 		font-size: 16px;
 		margin-right: 10px;
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			background-size: 13px;
-		}
-
-		.swiper-button-next {
-			right: -20px;
-		}
-
-		.swiper-button-prev {
-			left: -20px;
-		}
-	}
-}
-
-.swiper-button-next {
-	background: url('../img/arrow-right.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-
-	&::after {
-		display: none;
-	}
-}
-
-.swiper-button-prev {
-	background: url('../img/arrow-left.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-
-	&::after {
-		display: none;
 	}
 }
 
 .product {
+	@include r(767) {
+		width: 100%;
+	}
+
 	width: 30%;
 	border-radius: 10px;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
@@ -804,6 +1075,10 @@ input {
 }
 
 .pagination {
+	@include r(767) {
+		margin-top: 20px;
+	}
+
 	display: flex;
 	align-items: center;
 	margin-top: -4px;
@@ -823,19 +1098,36 @@ input {
 }
 
 .footer {
+	@include r(1023) {
+		padding-bottom: 26px;
+	}
+
 	background: $black;
 	color: #fff;
 	padding: 66px 0;
 
 	&.create {
+		border: 0;
 		padding: 30px 0;
 
 		.footer__col:nth-child(2) {
+			@include r(1023) {
+				width: 50%;
+			}
+
+			@include r(767) {
+				width: 100%;
+			}
+			
 			position: relative;
 			flex-shrink: 0;
     		width: 33%;
 
 			&::after {
+				@include r(1023) {
+					display: none;
+				}
+
 				content: '';
 				position: absolute;
 				right: 0;
@@ -847,6 +1139,14 @@ input {
 		}
 
 		.footer__col:nth-child(3) {
+			@include r(1023) {
+				width: 50%;
+			}
+
+			@include r(767) {
+				width: 100%;
+			}
+
 			font-size: 14px;
 			width: 29%;
 
@@ -879,6 +1179,10 @@ input {
 	}
 
 	.container {
+		@include r(1023) {
+			flex-wrap: wrap;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -950,13 +1254,35 @@ input {
 	}
 
 	&__col {
+		@include r(1023) {
+			margin-bottom: 40px;
+			border: 0;
+			width: 50%;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include r(767) {
+			width: 100%;
+		}
+
 		&-company {
+			@include r(767) {
+				padding: 0;
+			}
+			
 			display: flex;
 			align-items: center;
 			padding-right: 73px;
 			position: relative;
 
 			&::before {
+				@include r(1023) {
+					display: none;
+				}
+				
 				content: '';
 				position: absolute;
 				top: -28px;
@@ -1073,16 +1399,44 @@ input {
 }
 
 .create {
+	@include r(1279) {
+		background-size: 211%;
+	}
+
+	@include r(1023) {
+		background-size: 458%;
+	}
+
+	@include r(767) {
+		background-size: 1060%;
+	}		
+
 	padding: 44px 0 30px;
+	border: 3px dashed #fff;
+	background-size: 111%;
 
 	&.full {
 		padding: 72px 0 30px;
 
+		.company__left {
+			@include r(767) {
+				display: block;
+			}
+		}
+
 		.create__controls {
+			@include r(767) {
+				margin-top: 10px;
+			}
+
 			margin-top: 71px;
 		}
 
 		.create__photo {
+			@include r(767) {
+				margin: 0 auto;
+			}
+
 			width: 200px;
 			height: 200px;
 
@@ -1106,12 +1460,25 @@ input {
 		}
 
 		.company__name {
+			@include r(767) {
+				font-size: 30px;
+				margin-top: 40px;
+
+				br {
+					display: none;
+				}
+			}
+
 			font-size: 45px;
 			line-height: 1;
 			margin-bottom: 25px;
 		}
 
 		.company__desc {
+			@include r(767) {
+				font-size: 25px;
+			}
+
 			font-size: 35px;
 			line-height: 1.2;
 		}
@@ -1122,10 +1489,31 @@ input {
 	}
 
 	&__controls {
+		@include r(1023) {
+			margin-top: 20px;
+		}
+
 		margin-top: 52px;
+
+		.btn {
+			@include r(1023) {
+				font-size: 18px;
+				padding: 14px 17px;
+			}
+
+			@include r(767) {
+				text-align: center;
+				width: 100%;
+			}
+		}
 	}
 	
 	.company__name {
+		@include r(767) {
+			font-size: 20px;
+			line-height: 1.2;
+		}
+
 		font-size: 35px;
 		line-height: 30px;
 		margin-top: 9px;
@@ -1133,11 +1521,24 @@ input {
 	}
 
 	.company__desc {
+		@include r(767) {
+			font-size: 18px;
+			line-height: 1.2;
+		}
+
 		font-size: 25px;
 		line-height: 29px;
 	}
 
 	&__photo {
+		@include r(767) {
+			flex-shrink: 0;
+
+			& + .company__info {
+				padding: 0;
+			}
+		}
+
 		position: relative;
 		width: 120px;
 		height: 120px;
@@ -1286,6 +1687,15 @@ input {
 	}
 
 	&__background {
+		@include r(1023) {
+			margin-bottom: 15px;
+			margin-top: 15px;
+		}
+
+		@include r(767) {
+			height: 70px;
+		}
+
 		position: relative;
 		height: 50px;
 
@@ -1314,6 +1724,15 @@ input {
 		}
 
 		.label {
+			@include r(1023) {
+				display: block;
+				text-align: left;
+			}
+
+			@include r(767) {
+				text-align: center;
+			}
+			
 			text-align: center;
 			display: flex;
 			align-items: center;
@@ -1326,6 +1745,10 @@ input {
 }
 
 .step {
+	@include r(767) {
+		padding: 20px;
+	}
+
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
 	border-radius: 10px;
 	padding: 27px 32px;
@@ -1345,11 +1768,20 @@ input {
 	}
 
 	&__cards  {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		margin-top: 26px;
 
 		.card {
+			@include r(767) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
 			width: 47%;
 		}
 	}
@@ -1400,12 +1832,21 @@ input {
 	}
 
 	&__header {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
 		margin-bottom: 22px;
 
 		h3 {
+			@include r(1279) {
+				font-size: 16px;
+				padding-right: 10px;
+			}
+
 			margin: 0;
 			font-size: 19px;
 			color: #22292a;
@@ -1421,6 +1862,10 @@ input {
 		}
 
 		a {
+			@include r(767) {
+				display: none;
+			}
+
 			font-weight: bold;
 			font-size: 19px;
 			color: #319cd6;
@@ -1450,6 +1895,10 @@ input {
 	}
 
 	&__controls {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -1487,6 +1936,10 @@ input {
 	}
 
 	&__body {
+		@include r(767) {
+			display: block;
+		}
+
 		justify-content: space-between;
 		display: flex;
 		
@@ -1600,6 +2053,10 @@ input {
 			}
 
 			span {
+				@include r(767) {
+					font-size: 14px;
+				}
+
 				color: #22292a;
 				font-size: 16px;
 				display: flex;
@@ -1770,6 +2227,10 @@ input {
 	}
 
 	&__col {
+		@include r(767) {
+			width: 100%;
+		}
+
 		width: 47%;
 	}
 }
@@ -1841,6 +2302,10 @@ input {
 	}
 	
 	&__controls {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -1850,6 +2315,10 @@ input {
 		padding-right: 18px;
 
 		& > div {
+			@include r(767) {
+				margin-bottom: 10px;
+			}
+
 			width: initial !important;
 			flex-shrink: 0;
 			display: flex;
@@ -1864,6 +2333,10 @@ input {
 			}
 
 			&.checkbox {
+				@include r(767) {
+					margin-bottom: 20px;
+				}
+
 				span {
 					color: #319cd6;
 					font-size: 19px;
@@ -1902,6 +2375,11 @@ input {
 		}
 
 		.content {
+			@include r(767) {
+				display: block;
+				padding: 10px;
+			}
+
 			width: 100%;
 			display: flex;
 			align-items: center;
@@ -1911,6 +2389,11 @@ input {
 			pointer-events: none;
 
 			&::before {
+				@include r(767) {
+					top: initial;
+					bottom: 2px;
+				}
+
 				content: '';
 				position: absolute;
 				right: 18px;
@@ -1927,6 +2410,11 @@ input {
 	}
 
 	&__img {
+		@include r(767) {
+			margin-bottom: 15px;
+			float: left;
+		}
+
 		width: 60px;
 		height: 60px;
 		background-size: cover;
@@ -1939,6 +2427,10 @@ input {
 	}
 
 	&__price {
+		@include r(767) {
+			margin: 0;
+		}
+
 		flex-shrink: 0;
 		font-weight: bold;
 		font-size: 16px;
@@ -1947,6 +2439,12 @@ input {
 	}
 
 	&__name {
+		@include r(767) {
+			font-size: 14px;
+			padding-right: 0;
+			margin-bottom: 15px;
+		}
+
 		font-size: 16px;
 		color: #000;
 	}
@@ -1959,15 +2457,45 @@ input {
 	margin-top: 30px;
 
 	&__row {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		justify-content: space-between;
 	}
 
 	&__col {
+		@include r(767) {
+			width: 100%;
+
+			.create__photo {
+				background-size: 132% !important;
+			}
+		}
+
 		width: 47%;
 	}
 
 	&__controls {
+		@include r(767) {
+			display: block;
+
+			.btn {
+				width: 100%;
+				margin-bottom: 10px;
+				text-align: center;
+
+				svg {
+					margin-left: 10px !important;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -2117,6 +2645,10 @@ input {
 }
 
 #map {
+	@include r(767) {
+		height: 66vw;
+	}
+
 	width: 100%;
 	height: 435px;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
@@ -2124,44 +2656,149 @@ input {
 }
 
 .item {
-	display: flex;
+	@include r(1023) {
+		display: block !important;
+	}
+
+	display: flex !important;
 	justify-content: space-between;
 	margin-bottom: 40px;
+	border-bottom: 1px solid #c4c4c4;
+	padding-bottom: 30px;
+
+	&__name {
+		color: #1c1c1c;
+		font-family: $montserrat;
+		font-size: 19px;
+		margin-bottom: 4px;
+	}
+
+	&__category {
+		color: #868686;
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	&__desc {
+		margin-top: 30px;
+		margin-bottom: 41px;
+
+		p {
+			color: #1c1c1c;
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+
+	&__price {
+		color: #1c1c1c;
+		font-family: $montserrat;
+		font-weight: 900;
+		font-size: 30px;
+		line-height: 37px;
+	}
 
 	&__sliders {
-		width: 47%;
+		@include r(1023) {
+			width: 89%;
+			margin-bottom: 40px;
+		}
+
+		@include r(767) {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		width: 50%;
 		display: flex;
 	}
 
 	&__info {
-		width: 47%;
+		@include r(1023) {
+			width: 100%;
+			padding: 0;
+		}
+
+		width: 50%;
+		padding-left: 15%;
 	}
 
 	&__nav {
+		@include r(767) {
+			height: 60px;
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
 		height: 390px;
 		width: 70px;
-		margin-right: 15px;
+		margin-right: 10px;
 		flex-shrink: 0;
 
-		.swiper-slide {
+		div {
+			height: 100% !important;
+		}
+
+		.slick-track {
+			@include r(767) {
+				flex-direction: row;
+				height: 60px !important;
+				margin: 0;
+			}
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			margin-top: -9px;
+			height: calc(100% + 18px) !important;
+		}
+
+		.slick-current {
+			border: 3px solid #319CD6;
+		}
+
+		.slick-slide {
+			@include r(767) {
+				height: 60px !important;
+			}
+
 			width: 70px;
-			height: 70px;
+			height: 70px !important;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 8px;
+			cursor: pointer;
+			transition: $trans;
+
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 
 	&__main {
+		@include r(767) {
+			height: 82vw;
+		}
+
 		height: 390px;
 		width: 100%;
 
-		.swiper-slide {
+		div {
+			height: 100%;
+		}
+
+		.slick-slide {
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 10px;
+
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 }

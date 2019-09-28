@@ -21,37 +21,43 @@ $(window).on('load', () => {
     });
 });
 
-var swiper = new Swiper('.slider', {
-    loop: true,
-    effect: 'fade',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+$('.slider').slick({
+    arrows: false,
+    fade: true
 });
 
-var galleryThumbs = new Swiper('.item__nav', {
-    spaceBetween: 10,
-    slidesPerView: 5,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    direction: 'vertical',
-    centeredSlides: true,
-        slideToClickedSlide: true
+$('.slider .slick-next').click(() => {
+    $('.slider').slick('slickNext');
 });
 
-var galleryTop = new Swiper('.item__main', {
-    spaceBetween: 10,
-    slideToClickedSlide: true,
-    navigation: {
-        thumbs: {
-            swiper: galleryThumbs
+$('.slider .slick-prev').click(() => {
+    $('.slider').slick('slickPrev');
+});
+
+$('.item__main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.item__nav',
+    swipe: false
+});
+
+$('.item__nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.item__main',
+    arrows: false,
+    dots: false,
+    vertical: true,
+    focusOnSelect: true,
+    responsive: [ {
+        breakpoint: 1024,
+        settings: {
+            vertical: false
         }
-    }
+    }]
 });
-
-galleryThumbs.params.control = galleryTop;
-galleryTop.params.control = galleryThumbs;
 
 $('body').on('change', '.create__photo input', (e) => {
     if ($(e.currentTarget).val().length > 0) {
