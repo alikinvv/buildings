@@ -111,3 +111,9 @@ function initMap() {
         });
     }
 }
+
+$('body').on('click', '.template__img', (e) => {
+    $('.template__img').removeClass('active');
+    $('.template__top').addClass('active');
+    $(e.currentTarget).addClass('active');
+});
