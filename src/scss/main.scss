@@ -2892,7 +2892,7 @@ input {
 	}
 
 	&__list {
-		@include r(1300) {
+		@include r(1200) {
 			display: block;
 		}
 		
@@ -2995,7 +2995,7 @@ input {
 	}
 
 	&__col {
-		@include r(1300) {
+		@include r(1200) {
 			width: 100%;
 		}
 
