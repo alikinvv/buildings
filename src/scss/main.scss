@@ -522,6 +522,14 @@ input {
 				margin-bottom: 40px;
 
 				&__info {
+					@include r(1023) {
+						width: 60%;
+					}
+
+					@include r(767) {
+						width: 100%;
+					}
+					
 					width: 45%;
 				}
 			}
@@ -624,6 +632,36 @@ input {
 .sidebar {
 	background: #FFFFFF;
 	border-radius: 10px;
+
+	.create__photo {
+		background: url('../img/baner-create.png') no-repeat center;
+		background-size: 105%;
+		width: 100%;
+		color: #fff;
+		height: 600px;
+		margin: 0;
+
+		.label {
+			p {
+				font-weight: bold;
+				font-size: 36px;
+				margin-bottom: 20px;
+				font-family: $roboto;
+			}
+
+			span {
+				font-weight: 300;
+				font-size: 22px;
+				line-height: 40px;
+				font-family: $roboto;
+			}
+
+			svg {
+				font-size: 14px;
+				margin-top: 40px;
+			}
+		}
+	}
 
 	&__navigation {
 		li {
@@ -907,6 +945,7 @@ input {
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 10px;
+			position: relative;
 
 			&:focus {
 				outline: none;
@@ -948,9 +987,26 @@ input {
 		}
 	}
 
+	&__desc {
+		@include r(767) {
+			display: none;
+		}
+
+		position: absolute;
+		right: 20px;
+		bottom: 0;
+		color: #fff;
+	}
+
 	&__info {
+		@include r(1023) {
+			width: 60%;
+		}
+
 		@include r(767) {
 			width: 100%;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
 		}
 		
 		width: 63%;
@@ -991,6 +1047,7 @@ input {
 		@include r(767) {
 			margin-top: 20px;
 			text-align: center;
+			margin-right: 0;
 		}
 
 		position: relative;
